@@ -1,1 +1,22 @@
-<app-layout></app-layout>
+<!-- <app-layout></app-layout> -->
+
+<nz-layout style="height: 100%">
+  <nz-sider nzCollapsible nzWidth="350px">
+    <div class="logo">
+      <app-search></app-search>
+    </div>
+  </nz-sider>
+  <nz-layout>
+    <nz-header class="align-left"><app-navigation></app-navigation></nz-header>
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>User</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>©2021</nz-footer>
+  </nz-layout>
+</nz-layout>

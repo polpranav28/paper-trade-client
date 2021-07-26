@@ -1,7 +1,7 @@
 <ul nz-menu nzMode="horizontal">
-  <li nz-menu-item nzSelected>Navigation One</li>
-  <li nz-menu-item>Navigation Two</li>
-  <li nz-submenu nzTitle="Navigation Three - Submenu">
+  <li nz-menu-item nzSelected [routerLink]="['dashboard']">Dashboard</li>
+  <li nz-menu-item>Portfolio</li>
+  <li nz-submenu nzTitle="Holdings">
     <ul>
       <li nz-menu-group nzTitle="Item 1">
         <ul>
@@ -31,7 +31,8 @@
   </li>
   <li nz-menu-item>
     <a href="https://ng.ant.design" target="_blank" rel="noopener noreferrer"
-      >Navigation Four - Link</a>
+      >Navigation Four - Link</a
+    >
   </li>
   <app-user-avatar></app-user-avatar>
 </ul>

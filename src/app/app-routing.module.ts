@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent },
+  {
+    path: 'dashboard',
+    pathMatch: 'full',
+    loadChildren: () =>
+      import('./pages/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
 ];
 
 @NgModule({
